@@ -14,6 +14,10 @@ class Item
     @price
   end
 
+  def new_price=(user_input)
+    @price = user_input
+  end
+
   def color
     @color
   end
@@ -40,3 +44,7 @@ item3 = Item.new("Jump Rope", 3, "pink", "Outdoor Fun")
 p item1.name
 
 p item2.get_info
+
+p item3.price
+item3.new_price = 5
+p item3.price
