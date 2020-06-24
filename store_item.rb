@@ -37,25 +37,28 @@ class Item
 end
 
 class Game < Item
-  # def initialize
-  #   super
-  #   @age_range = input_options[:age_range]
-  # end
+  def initialize(input_options)
+    super
+    @age_range = input_options[:age_range]
+  end
   
   def fun
     p "yes"
   end
 
-  # def age_range
-  #   p @age_range
-  # end
+  def age_range
+    p @age_range
+  end
   
 end
 
 class Food < Item
-  def initialize
+  def initialize(input_options)
     super
     @shelf_life = input_options[:shelf_life]
+  end
+  def shelf_life
+    p @shelf_life
   end
 end
 
@@ -69,7 +72,8 @@ item2 = Game.new(name: "Bee Game", price: 7, color: "yellow", category: "Indoor 
 item3 = Item.new(name: "Jump Rope", price: 3, color: "pink", category: "Outdoor Fun")
 item4 = Food.new(name: "Lollipop", price: 2, color: "rainbow", category: "Food", shelf_life: "2 months")
 
-item2.fun
+item2.age_range
+item4.shelf_life
 
 # p item1.name
 
